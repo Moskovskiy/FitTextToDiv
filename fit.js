@@ -22,14 +22,13 @@ function fitTextInsideDiv(container, str, min, max) {
   container.style.height = y + 'px'
   
   for (let t = Math.round(fontSize); t >= min; t--) {
-    
- 	  container.style.fontSize = t + 'px' // remove if no need to apply
-  	let ia = container.scrollWidth
-  	let ib = container.scrollHeight
+    container.style.fontSize = t + 'px' // remove if no need to apply
+    let ia = container.scrollWidth
+    let ib = container.scrollHeight
     
     if ((ia <= x) && (ib <= y)) {
       return t // returns calculated font size
-  	}
+    }
   }
   
   return null // if unable to fit
